@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather-app</title>
+		<meta charset="UTF-8" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- Upper Row-->
+			<div class="row searchbar">
+				<div class="col-7 form-container">
+					<form id="search-form">
+						<div class="row">
+							<div class="col-9">
+								<input
+									type="text"
+									id="search-city"
+									class="form-control"
+									placeholder="Enter city"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="col-3">
+								<input
+									class="btn btn-primary search-button"
+									type="submit"
+									value="Search"
+								/>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-1 location-container">
+					<button
+						id="location"
+						class="btn btn-primary search-button location-button"
+					>
+						<i class="fa-solid fa-location-dot"></i>
+					</button>
+				</div>
+				<div class="col-4 time">
+					<p id="time" class="text-center">Tuesday 14:20</p>
+				</div>
+			</div>
+			<!-- Medium Row-->
+			<div class="row weather-today">
+				<div class="col-4">
+					<h1 id="current-city">Madrid</h1>
+					<span id="current-temp">21</span>
+					<span class="units">
+						<a href="#" id="celcius" class="focus">°C</a>
+						<!-- <span class="divider switch">|</span>
+						<a href="#" id="farenheit">°F</a> -->
+					</span>
+					<div id="current-weather">Cloudy</div>
+				</div>
+				<div class="col-5">
+					<ul>
+						<span class="weather-conditions">Weather conditions:</span>
+						<li>Humidity <span id="humidity">57</span>%</li>
+						<li>Wind: <span id="wind">8</span> km/h</li>
+						<li>Pressure: <span id="pressure">1012</span></li>
+					</ul>
+				</div>
+				<div class="col-3 weather-img text-center">
+					<img src="images/cloud.png" alt="weather icon" class="weather-icon" />
+				</div>
+			</div>
+			<hr />
+			<!-- Bottom Row-->
+			<div class="row justify-content-between weather-prediction">
+				<div class="col-2 weather-box">
+					<div class="date"><span class="day">Wed</span> <br />20 Apr</div>
+					<img src="images/cloud.png" alt="" class="weather-icon-sm" />
+					<div class="temp-range">
+						H:13° <span class="divider">|</span> L:6°
+					</div>
+				</div>
+				<div class="col-2 weather-box">
+					<div class="date"><span class="day">Thu</span> <br />21 Apr</div>
+					<img src="images/cloudy-day.png" alt="" class="weather-icon-sm" />
+					<div class="temp-range">
+						H:17° <span class="divider">|</span> L:3°
+					</div>
+				</div>
+				<div class="col-2 weather-box">
+					<div class="date"><span class="day">Fri</span> <br />22 Apr</div>
+					<img src="images/cloudy-day.png" alt="" class="weather-icon-sm" />
+					<div class="temp-range">
+						H:10° <span class="divider">|</span> L:3°
+					</div>
+				</div>
+				<div class="col-2 weather-box">
+					<div class="date"><span class="day">Sat</span> <br />23 Apr</div>
+					<img src="images/rain.png" alt="" class="weather-icon-sm" />
+					<div class="temp-range">
+						H:13° <span class="divider">|</span> L:5°
+					</div>
+				</div>
+				<div class="col-2 weather-box">
+					<div class="date"><span class="day">Sun</span> <br />24 Apr</div>
+					<img src="images/cloud.png" alt="" class="weather-icon-sm" />
+					<div class="temp-range">
+						H:16° <span class="divider">|</span> L:6°
+					</div>
+				</div>
+			</div>
+			<p class="footer text-center">Built by Liza Kuchmenko&#9825;</p>
+		</div>
+		<script src="src/script.js"></script>
+	</body>
+</html>
